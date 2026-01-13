@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 <head>
-  <title>Coin Profit Tracker Website</title>
+  <title>Coin Profit Tracker Home</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <script
+    src="https://kit.fontawesome.com/1d6bba936e.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
 
-<body></body>
+<body>
+  <header>
+    <h2>Coin Profit Tracker</h2>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <a href="index.html">
+        <li><i class="fa-solid fa-house"></i> Home</li>
+      </a>
+      <a href="https://github.com/Yuwol6/Coin-Profit-Tracker">
+        <li><i class="fa-brands fa-github"></i> GitHub</li>
+      </a>
+      <a href="about.html">
+        <li><i class="fa-solid fa-circle-info"></i> About</li>
+      </a>
+    </ul>
+  </nav>
+
+  <main class="layout">
+    <section class="left">
+      <div class="chart">
+        <img src="images/bitcoinPrice.jpg" alt="BitCoin Price Chart" />
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="content">
+        <p class="prediction">
+          For a 1% profit, the bid must rise by 1.27% to $138845.36
+        </p>
+        <p class="prediction">
+          For a 5% profit, the bid must rise by 5.28% to $144344.19
+        </p>
+        <p class="prediction">
+          For a 10% profit, the bid must rise by 10.30% to $151217.72
+        </p>
+        <button onclick="refresh()">Refresh</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function refresh() {
+      alert('This should refresh the API call');
+    }
+  </script>
+</body>
