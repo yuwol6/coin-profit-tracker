@@ -55,6 +55,8 @@ decimal percentageToTenPercentProfit = GetPercentageToBid(tenPercentProfitBid, b
 Console.WriteLine($"For a 10% profit, the bid must rise by {percentageToTenPercentProfit:F2}% to ${tenPercentProfitBid:F2}");
 
 
+// I want to send to the frontend: percentages to 1/5/10% profit & 1/5/10$ profit bids; so 6 values in total.
+
 decimal GetBidForPercentProfit(decimal targetProfitDecimal, decimal baseBid)
 {
     return baseBid * (1 + targetProfitDecimal);
