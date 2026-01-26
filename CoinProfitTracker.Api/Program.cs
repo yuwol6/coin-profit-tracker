@@ -1,9 +1,12 @@
+using CoinProfitTracker.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors();
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+builder.Services.AddHttpClient<CoinSpotService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
