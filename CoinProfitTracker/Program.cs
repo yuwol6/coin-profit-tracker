@@ -36,7 +36,7 @@ if (bid > ask) Console.WriteLine("Warning: the bid is higher than ask; results a
 // produce formula to break even, including fees
 decimal breakEvenBid = ask * (1 + tradingFee) / (1 - tradingFee);
 
-// calculate break-even price
+// calculate break even price
 decimal percentageToBreakEven = (breakEvenBid - bid)/bid * 100;
 Console.WriteLine();
 Console.WriteLine($"To break even, the bid must rise by {percentageToBreakEven:F2}% to ${breakEvenBid:F2}");

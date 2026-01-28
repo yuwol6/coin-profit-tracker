@@ -11,7 +11,6 @@ namespace CoinProfitTracker.Api
         private readonly HttpClient _http;
         private readonly ILogger<CoinSpotService> _logger;
         const string bitCoin = "BTC";
-        const decimal tradingFee = 0.001m;
         private readonly string _url;
 
         public CoinSpotService(HttpClient http, ILogger<CoinSpotService> logger)
@@ -37,6 +36,7 @@ namespace CoinProfitTracker.Api
             JsonElement prices = root.GetProperty("prices"); // get ask and bid as decimal variable
             decimal ask = decimal.Parse(prices.GetProperty("ask").GetString()!, CultureInfo.InvariantCulture);
             decimal bid = decimal.Parse(prices.GetProperty("bid").GetString()!, CultureInfo.InvariantCulture);
+            if (bid > ask) _logger.LogWarning("Warning: the bid is higher than ask; results and calculations may be off.");
             return (ask, bid);
         }
         
