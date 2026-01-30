@@ -105,13 +105,14 @@ header {
 .about {
   margin-top: 40px;
   margin-bottom: 0px;
-  font-size: 3.4rem;
+  font-size: 3.2rem;
 }
 
 .layout {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 70px;
   margin: 0 auto;
   padding: 30px;
 }
@@ -150,7 +151,8 @@ header {
 .current-price {
   display: flex;
   min-width: 450px;
-  min-height: 260px;
+  width: 100%;
+  min-height: 290px;
   flex-direction: column;
   background-color: hsl(224, 24%, 19%);
   border-radius: 10px;
@@ -158,7 +160,7 @@ header {
   border: 1px solid hsl(224, 24%, 37%);
 }
 .current-price-heading {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .ask-bid-container {
   display: inline-block;
@@ -167,17 +169,20 @@ header {
 .ask-container,
 .bid-container {
   display: flex;
-  margin-top: 10px;
   color: rgb(223, 233, 218);
-  font-size: 2rem;
+  font-size: 2.3rem;
   line-height: 2;
   justify-content: space-around;
+  align-items: center;
+}
+.ask-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .content {
   display: flex;
   min-width: 450px;
-  min-height: 260px;
+  min-height: 290px;
   padding: 20px;
   border: 1px solid hsl(224, 24%, 37%);
   border-radius: 10px;
@@ -185,7 +190,7 @@ header {
   background-color: hsl(224, 24%, 19%);
 }
 .highlight {
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: hsla(176, 73%, 75%, 0.943);
 }
 .profit-targets-heading {

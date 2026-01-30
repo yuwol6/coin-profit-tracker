@@ -1,3 +1,4 @@
+const lastRefreshText = document.getElementById('last-refresh-text');
 const refreshBtn = document.getElementById('refreshBtn');
 const askText = document.getElementById('ask-text');
 const bidText = document.getElementById('bid-text');
@@ -13,6 +14,7 @@ async function getTradeMetrics() {
   const metricResponse = await fetch('https://localhost:7297/api/prices');
   const metricData = await metricResponse.json();
 
+  displayTime();
   displayMetrics(metricData);
 }
 
@@ -44,6 +46,15 @@ function changeNumToAud(number) {
   });
 
   return returnNum;
+}
+
+function displayTime() {
+  const timeNow = new Date().toLocaleTimeString('en-AU', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  });
+  lastRefreshText.textContent = timeNow;
 }
 
 refreshBtn.addEventListener('click', () => {
