@@ -29,39 +29,46 @@
   </header>
 
   <div class="button-container">
-    <button class="refresh-button">
+    <button class="refresh-button" id="refreshBtn">
       <span class="button-text">↻ Refresh Prices</span>
     </button>
   </div>
   <h3 class="last-refresh">Last refreshed: 11:30:46 AM</h3>
-  <br />
 
   <main class="layout">
     <section class="left">
-      <div class="chart">
-        <h2>Current Price:</h2>
+      <div class="current-price">
+        <h2 class="current-price-heading">Current Price (AUD):</h2>
         <div class="ask-bid-container">
-          <h2>Ask: $151000</h2>
-          <h2>Bid: $151010</h2>
+          <h2 class="ask-container">
+            <span class="highlight">Ask </span
+            ><span id="ask-text">Press "Refresh Prices"</span>
+          </h2>
+          <h2 class="bid-container">
+            <span class="highlight">Bid </span
+            ><span id="bid-text">Press "Refresh Prices"</span>
+          </h2>
         </div>
       </div>
     </section>
 
     <section class="right">
       <div class="content">
-        <h2>Profit Targets:</h2>
-        <p class="prediction">
-          <span class="highlight">1%</span> For a 1% profit, the bid must rise
-          by 1.27% to $138845.36
-        </p>
-        <p class="prediction">
-          <span class="highlight">5%</span> For a 5% profit, the bid must rise
-          by 5.28% to $144344.19
-        </p>
-        <p class="prediction">
-          <span class="highlight">10%</span> For a 10% profit, the bid must rise
-          by 10.30% to $151217.72
-        </p>
+        <h2 class="profit-targets-heading">Profit Targets:</h2>
+        <div class="prediction-case">
+          <p class="prediction">
+            <span class="one-highlight">1%</span> The bid must rise by 1.27% to
+            $138845.36
+          </p>
+          <p class="prediction">
+            <span class="five-highlight">5%</span> The bid must rise by 5.28% to
+            $144344.19
+          </p>
+          <p class="prediction">
+            <span class="ten-highlight">10%</span> The bid must rise by 10.30%
+            to $151217.72
+          </p>
+        </div>
       </div>
     </section>
   </main>

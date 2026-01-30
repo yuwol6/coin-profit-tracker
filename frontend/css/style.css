@@ -94,11 +94,17 @@ header {
   text-align: center;
   margin-bottom: 50px;
 }
+
+.about-header {
+  margin-bottom: 10px;
+}
+
 .title {
-  font-size: 4rem;
+  font-size: 2.6rem;
 }
 .about {
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 0px;
   font-size: 3.4rem;
 }
 
@@ -107,21 +113,25 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   margin: 0 auto;
+  padding: 30px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  header {
+    margin-bottom: 30px;
+  }
+  .button-container {
+    margin-bottom: 0px;
+  }
   .layout {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 30px;
+    padding-top: 0;
+    justify-content: center;
   }
   .left {
     min-height: 150px;
     margin-top: 40px;
-    justify-content: flex-start;
-  }
-  .chart {
-    flex-direction: column;
-    align-self: flex-start;
   }
 }
 
@@ -137,24 +147,38 @@ header {
   align-items: center;
 }
 
-.chart {
+.current-price {
   display: flex;
   min-width: 450px;
+  min-height: 260px;
   flex-direction: column;
   background-color: hsl(224, 24%, 19%);
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   border: 1px solid hsl(224, 24%, 37%);
 }
+.current-price-heading {
+  margin-bottom: 10px;
+}
 .ask-bid-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: inline-block;
   text-align: center;
+}
+.ask-container,
+.bid-container {
+  display: flex;
+  margin-top: 10px;
+  color: rgb(223, 233, 218);
+  font-size: 2rem;
+  line-height: 2;
+  justify-content: space-around;
 }
 
 .content {
   display: flex;
-  padding: 30px;
+  min-width: 450px;
+  min-height: 260px;
+  padding: 20px;
   border: 1px solid hsl(224, 24%, 37%);
   border-radius: 10px;
   flex-direction: column;
@@ -164,9 +188,45 @@ header {
   font-size: 2rem;
   color: hsla(176, 73%, 75%, 0.943);
 }
+.profit-targets-heading {
+  margin-bottom: 10px;
+}
 
+.prediction-case {
+  display: inline-block;
+  justify-content: center;
+}
 .prediction {
-  padding: 15px;
-  font-size: 20px;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 20px;
+  line-height: 2;
+}
+.one-highlight {
+  font-size: 1.5rem;
+  background-color: hsla(204, 38%, 38%, 0.943);
+  border-radius: 16px;
+  padding: 8px;
+}
+.five-highlight {
+  font-size: 1.5rem;
+  background-color: hsla(204, 81%, 26%, 0.943);
+  border-radius: 16px;
+  padding: 8px;
+}
+.ten-highlight {
+  font-size: 1.5rem;
+  background-color: hsla(204, 96%, 9%, 0.943);
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.about-case {
+  width: 50%;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  align-self: center;
+  font-size: 1.6rem;
+  margin-bottom: 60px;
 }

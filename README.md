@@ -6,7 +6,9 @@ The goal of this project is to simplify and automate the answer to the question,
 
 This tracker is designed for highly liquid assets like BTC, where spreads tend to be stable. Assuming similar spreads at entry and exit is a reasonable simplification under normal market conditions and keeps the calculations deterministic.
 
-The calculation logic involves fetching the bid and ask,
+## Web Preview
+
+![CoinProfitTracker Preview](frontend/images/preview.png)
 
 ## Tech Stack
 
@@ -33,7 +35,7 @@ app.js
 CoinProfitTracker.Api
 => handles HTTP request, logging, external API call to CoinSpot API and request calculations from .Core
 
-CoinProfitTracker.Core  
+CoinProfitTracker.Core
 => contains all calculation logic and returns metrics object to .Api
 
 app.js
